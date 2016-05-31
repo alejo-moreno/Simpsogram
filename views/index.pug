@@ -1,41 +1,14 @@
 doctype html
 html(lang='en')
-  head
-    title Platzigram
+  head                     
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')    
-    link(href='https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script', rel='stylesheet', type='text/css')    
+    link(href='https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script', rel='stylesheet', type='text/css')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet', integrity='sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1', crossorigin='anonymous')    
     link(href='app.css', rel='stylesheet')
+    title= title  
   body
     section#main-container
-      .container
-        .row
-          .col.s10.push-s1
-            .row
-              .col.m5.hide-on-small-only
-                img.iphone(src='assets/iphone.png', alt='iphone')
-              .col.s12.m7
-                .row
-                  .signup-box
-                    h1.platzigram Platzigram
-                    form.signup-form
-                      h2 ¡Registrate ahora!
-                      .section
-                        a.btn.btn-fb.hide-on-small-only(href='') Iniciar sesión con Facebook
-                        a.btn.btn-fb.hide-on-med-and-up(href='') Iniciar sesión
-                      .divider
-                      .section
-                        input(type='email', name='email', placeholder='Email')
-                        input(type='text', name='name', placeholder='Nombre completo')
-                        input(type='text', name='username', placeholder='Usuario')
-                        input(type='password', name='password', placeholder='Contraseña')
-                        button.btn.waves-effect.waves-light.btn-signup(type='submit') Registrate
-                  // end signup-box
-                // end row
-                .row
-                  .login-box
-                    | ¿Ya tienes cuenta? 
-                    a(href='/signin') Entrar
     footer.site-footer
       .container
         .row
@@ -47,7 +20,7 @@ html(lang='en')
               li
                 a(href='#!') Inglés
           .col.s12.l3.push-16.center-align
-            | © 2016 Platzigram
+            | © 2016 Simpsogram
     script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
     script(src='app.js' type='application/javascript')
