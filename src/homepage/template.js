@@ -5,13 +5,13 @@ import translate from '../translate';
 import request from 'superagent';
 
 
-export default function (characters) {
+module.exports = function(characters) {
     var el = yo`
 <div class="container timeline">
 <div class="row">
   <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">
-    <form enctype="multipart/form-data" class="form-upload" id="form-upload" onsubmit=${onsubmit}>
-       <div id="filename" class="fileUpload btn btn-flat cyan">
+    <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=${onsubmit}>
+       <div id="fileName" class="fileUpload btn btn-flat cyan">
        <span><i class="fa fa-camera" aria-hidden="true"></i> ${translate.message('upload-picture')}</span>
        <input name="picture" id="file" type="file" class="upload" onchange=${onchange} />
        </div>
@@ -46,10 +46,12 @@ export default function (characters) {
     function onsubmit(ev) {
         ev.preventDefault();
         var data = new FormData(this);
-        request.post('/api/pictures')
+        request
+            .post('/api/pictures')
             .send(data)
-            .end(function (err, res) {
-                console.log(arguments);
+            .end(function(err, res) {
+                if (err) console.log(err);
+                console.log(res);
             })
 
     }
