@@ -9,18 +9,14 @@ var IntlMessageFormat = require('intl-messageformat');
 require('intl-relativeformat/dist/locale-data/en.js');
 require('intl-relativeformat/dist/locale-data/es.js');
 
-var rf = new IntlRelativeFormat('es');
-var es = require('./es')
-var en = require('./en-US')
-
 var MESSAGES = {};
-MESSAGES.es = es;
-MESSAGES['en-US'] = en;
+MESSAGES.es = require('./es');
+MESSAGES['en-US'] = require('./en-US');
 
-var locale = 'es';
+var locale = localStorage.locale || 'es';
 
 module.exports = {
-    message: function(text, opts) {
+    message: function (text, opts) {
         opts = opts || {};
         var mf = new IntlMessageFormat(MESSAGES[locale][text], locale, null)
         return mf.format(opts);

@@ -1,3 +1,20 @@
 module.exports = {
-    likes: '{likes,number} me gusta'
+    'likes': '{likes,number} me gusta',
+    'logout': 'Salir',
+    'english': 'Inglés',
+    'spanish': 'Español',
+    'signup.subheading': '¡Registrate ahora!',
+    'signin.text': 'Iniciar sesión',
+    'signin.facebook': 'Iniciar sesión con Facebook',
+    'email': 'Correo electrónico',
+    'username': 'usuario',
+    'fullname': 'Nombre completo',
+    'password': 'Contraseña',
+    'signup.call-to-action': 'Regístrate',
+    'signin.have-account': '¿Ya tienes cuenta?',
+    'signin': 'Entrar',
+    'signin.not-have-account': '¿No tienes una cuenta?',
+    'language': 'Idioma',
+    'upload-picture': 'Subir imagen',
+    'upload': 'Subir'
 }

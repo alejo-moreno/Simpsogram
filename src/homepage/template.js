@@ -1,18 +1,58 @@
 import yo from 'yo-yo';
 import layout from '../layout';
 import picture from '../picture-card';
+import translate from '../translate';
+import request from 'superagent';
 
 
-
-export default function(characters) {
+export default function (characters) {
     var el = yo`
 <div class="container timeline">
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">
+    <form enctype="multipart/form-data" class="form-upload" id="form-upload" onsubmit=${onsubmit}>
+       <div id="filename" class="fileUpload btn btn-flat cyan">
+       <span><i class="fa fa-camera" aria-hidden="true"></i> ${translate.message('upload-picture')}</span>
+       <input name="picture" id="file" type="file" class="upload" onchange=${onchange} />
+       </div>
+       <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">
+       ${translate.message('upload')}
+       </button>
+       <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=${oncancel}><i class="fa fa-times" aria-hidden="true"></i></button>
+
+    </form>
+  </div>
+</div>
     <div class="row">
       <div class="col s12 m10 offset-m1 l6 offset-l3">
         ${characters.map(character => picture(character))}
       </div>
     </div>
 </div>`;
+
+    function toggleButtons() {
+        document.querySelector('#fileName').classList.toggle('hide');
+        document.querySelector('#btnUpload').classList.toggle('hide');
+        document.querySelector('#btnCancel').classList.toggle('hide');
+    }
+
+    function oncancel() {
+        toggleButtons();
+        document.getElementById('formUpload').reset();
+    }
+    function onchange() {
+        toggleButtons();
+    }
+    function onsubmit(ev) {
+        ev.preventDefault();
+        var data = new FormData(this);
+        request.post('/api/pictures')
+            .send(data)
+            .end(function (err, res) {
+                console.log(arguments);
+            })
+
+    }
 
     return layout(el);
 }
