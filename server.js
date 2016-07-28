@@ -48,14 +48,26 @@ app.get('/api/characters', function(req, res) {
         });
 });
 
+app.get('/api/character/:id', function(req, res) {
+    console.log('llegue')
+    request
+        .get(`http://api.tvmaze.com/characters/${req.params.id}`)
+        .end(function(err, result) {
+            if (err) return res.status(500).json(err);
+            var character = JSON.parse(result.text);
+            console.log(character);
+            res.json(character);
+        });
+})
+
 app.post('/api/pictures', function(req, res) {
     upload(req, res, function(err) {
-        if (err) return console.log(err);
-        res.status(500).send("file uploaded");
+        if (err) return res.status(500).json(err);
+        res.status(200).send("file uploaded");
     })
 })
 
-app.listen(3000, function(err) {
+app.listen(3002, function(err) {
     if (err) return console.log('error'), process.exit(1);
     console.log("Listening on 3000");
 })

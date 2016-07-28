@@ -23,10 +23,8 @@ module.exports = function(characters) {
     </form>
   </div>
 </div>
-    <div class="row">
-      <div class="col s12 m10 offset-m1 l6 offset-l3">
-        ${characters.map(character => picture(character))}
-      </div>
+    <div class="row">      
+        ${characters.map(character => picture(character))}      
     </div>
 </div>`;
 
@@ -53,7 +51,6 @@ module.exports = function(characters) {
                 if (err) console.log(err);
                 console.log(res);
             })
-
     }
 
     return layout(el);
