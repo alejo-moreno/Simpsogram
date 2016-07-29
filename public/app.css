@@ -6288,8 +6288,8 @@ body {
   line-height: 30px;
   margin-left: 12px; }
 
-.card .heart,
-.card .heart-o {
+.card .fa-heart,
+.card .fa-heart-o {
   font-size: 30px; }
 
 .fa-heart-o {
@@ -6298,13 +6298,13 @@ body {
 .fa-heart {
   color: #f44336; }
 
-.heart {
+.fa-heart {
   display: none; }
 
-.card.liked .heart {
+.card.liked .fa-heart {
   display: block; }
 
-.card.liked .heart-o {
+.card.liked .fa-heart-o {
   display: none; }
 
 .form-upload span, .form-upload button {

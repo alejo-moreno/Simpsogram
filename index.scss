@@ -120,8 +120,8 @@ $avatar-size-big: 150px;
   margin-left: 12px;
 }
 
-.card .heart,
-.card .heart-o, {
+.card .fa-heart,
+.card .fa-heart-o, {
   font-size: 30px;
 }
 
@@ -133,16 +133,16 @@ $avatar-size-big: 150px;
   color: $platzigram-red;
 }
 
-.heart {
+.fa-heart {
   display: none;
 }
 
 .card.liked {
-  .heart {
+  .fa-heart {
     display: block;
   }
 
-  .heart-o {
+  .fa-heart-o {
     display: none;
   }
 }

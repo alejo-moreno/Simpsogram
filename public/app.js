@@ -18182,6 +18182,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             }).slice(0, 15);
             character.posts = posts;
             (0, _emptyElement2.default)(main).appendChild((0, _template2.default)(character));
+            window.scrollTo(0, 0);
         });
     });
 });

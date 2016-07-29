@@ -14,6 +14,7 @@ page('/character/:id', header, function(ctx, next) {
             var posts = gallery.data.sort(g => 0.5 - Math.random()).slice(0, 15);
             character.posts = posts;
             empty(main).appendChild(template(character));
+            window.scrollTo(0, 0);
         });
     });
 })
