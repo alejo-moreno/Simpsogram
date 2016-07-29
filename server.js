@@ -40,9 +40,9 @@ app.get('/api/characters', function(req, res) {
         .end(function(err, result) {
             var result = JSON.parse(result.text);
             var characters = result.map(data => {
-                data.character.likes = 0;
-                data.character.createdAt = new Date().setDate(new Date().getDate() - 10);
-                return data.character;
+                data.likes = 0;
+                data.createdAt = new Date().setDate(new Date().getDate() - 10);
+                return data;
             })
             res.json(characters);
         });
@@ -58,6 +58,18 @@ app.get('/api/character/:id', function(req, res) {
             console.log(character);
             res.json(character);
         });
+})
+
+app.get('/api/gallery', function(req, res) {
+    request
+        .get('https://api.imgur.com/3/gallery/r/TheSimpsons/')
+        .set('Authorization', 'Client-ID 746eb151b7e2d67')
+        .set('Accept', 'application/json')
+        .end(function(err, result) {
+            if (err) return res.status(500).json(err);
+            var gallery = JSON.parse(result.text);
+            res.json(gallery);
+        })
 })
 
 app.post('/api/pictures', function(req, res) {

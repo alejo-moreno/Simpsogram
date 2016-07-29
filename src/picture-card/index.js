@@ -2,39 +2,39 @@ import yo from 'yo-yo';
 import translate from '../translate';
 
 
-export default function pictureCard(character) {
+export default function pictureCard(subject) {
 
     var el;
 
-    function render(character) {
-        return yo`<div class="card col s12 m6 l4 ${character.liked ? 'liked' : ''}">
+    function render(subject) {
+        return yo`<div class="card col s12 m6 l4 ${subject.liked ? 'liked' : ''}">
         <div class="card-image">
-            <img class="activator" src="http://materializecss.com/images/office.jpg">
+            <img class="activator" src="${subject.character.image.medium}">
         </div>
         <div class="card-content">
-            <a href="/character/${character.id}" class="card-title">
-                <img src="${character.image.medium}" class="avatar" />                
+            <a href="/character/${subject.character.id}" class="card-title">
+                <img src="${subject.person.image.medium}" class="avatar" />                
             </a>
-            <span class="username">${character.name}</span>            
-            <small class="right time">${translate.date.format(character.createdAt)} </small>
+            <span class="username">${subject.character.name}</span>            
+            <small class="right time">${translate.date.format(subject.createdAt)} </small>
             <p>
                <a class="left" href="#" onclick=${like.bind(null, true)}><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                <a class="left" href="#" onclick=${like.bind(null, false)}><i class="fa fa-heart" aria-hidden="true"></i></a>
-               <span class="left likes">${translate.message('likes', { likes: character.likes })}  </span>
+               <span class="left likes">${translate.message('likes', { likes: subject.likes })}  </span>
             </p>
         </div>
     </div>`;
     }
 
     function like(liked) {
-        character.liked = liked;
-        character.likes += liked ? 1 : -1;
-        var newEl = render(character);
+        subject.liked = liked;
+        subject.likes += liked ? 1 : -1;
+        var newEl = render(subject);
         yo.update(el, newEl)
         return false;
     }
 
-    el = render(character);
+    el = render(subject);
     return el;
 
 }

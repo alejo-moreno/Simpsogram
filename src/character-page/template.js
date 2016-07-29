@@ -15,6 +15,9 @@ export default function userPageTemplate(character) {
                 <h2 class="hide-on-large-only center-align">${character.name}</h2>
                 <h2 class="hide-on-med-and-down left-align">${character.name}</h2>
               </div>
+            </div>
+            <div class="row">
+            ${character.posts.map(post => renderPost(post))}
             </div>                        
         </div>
       </div>
@@ -22,5 +25,16 @@ export default function userPageTemplate(character) {
     return layout(el)
 }
 
-
+function renderPost(post) {
+    return yo`    
+        <div class="col s12 m6 l4">
+           <div class="picture-container">
+            <img src="${post.link}" class="picture" />
+            <div class="likes">            
+                <i class="fa fa-heart"></i>
+                ${post.score}
+            </div>
+           </div>
+        </div>`;
+}
 

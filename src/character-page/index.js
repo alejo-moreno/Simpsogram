@@ -9,6 +9,11 @@ page('/character/:id', header, function(ctx, next) {
     var main = document.getElementById('main-container');
     ApiClient.loadCharacter(ctx.params.id, function(err, character) {
         title(`Simpsogram - ${character.name}`);
-        empty(main).appendChild(template(character));
+        ApiClient.loadGallery(function(err, gallery) {
+            if (err) return console.log(err);
+            var posts = gallery.data.sort(g => 0.5 - Math.random()).slice(0, 15);
+            character.posts = posts;
+            empty(main).appendChild(template(character));
+        });
     });
 })

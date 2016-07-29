@@ -5,7 +5,7 @@ import translate from '../translate';
 import request from 'superagent';
 
 
-module.exports = function(characters) {
+module.exports = function template(characters) {
     var el = yo`
 <div class="container timeline">
 <div class="row">

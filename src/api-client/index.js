@@ -15,10 +15,22 @@ export function loadCharacter(id, callback) {
     request
         .get(`/api/character/${id}`)
         .end(function(err, result) {
-            if (err) return console.log(err);
+            if (err) callback(err);
             callback(null, result.body);
         })
 }
+
+export function loadGallery(callback) {
+    request
+        .get(`/api/gallery`)
+        .end(function(err, result) {
+            if (err) callback(err);
+            callback(null, result.body);
+        })
+}
+
+
+/**Other async options */
 
 export function loadCharactersAxios(ctx, next) {
     axios
