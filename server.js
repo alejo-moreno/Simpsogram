@@ -79,7 +79,7 @@ app.post('/api/pictures', function(req, res) {
     })
 })
 
-app.listen(3002, function(err) {
+app.listen(process.env.PORT || 3002, function(err) {
     if (err) return console.log('error'), process.exit(1);
     console.log("Listening on 3000");
 })
