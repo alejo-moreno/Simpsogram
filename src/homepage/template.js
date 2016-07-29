@@ -11,7 +11,7 @@ module.exports = function template(characters) {
 <div class="row">
   <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">
     <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=${onsubmit}>
-       <div id="fileName" class="fileUpload btn btn-flat cyan">
+       <div id="fileName" class="fileUpload hide btn btn-flat cyan">
        <span><i class="fa fa-camera" aria-hidden="true"></i> ${translate.message('upload-picture')}</span>
        <input name="picture" id="file" type="file" class="upload" onchange=${onchange} />
        </div>

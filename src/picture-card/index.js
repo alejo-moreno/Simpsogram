@@ -13,9 +13,10 @@ export default function pictureCard(subject) {
         </div>
         <div class="card-content">
             <a href="/character/${subject.character.id}" class="card-title">
-                <img src="${subject.person.image.medium}" class="avatar" />                
+                <img src="${subject.person.image.medium}" class="avatar" />
+                <span class="username">${subject.character.name}</span>                
             </a>
-            <span class="username">${subject.character.name}</span>            
+                        
             <small class="right time">${translate.date.format(subject.createdAt)} </small>
             <p>
                <a class="left" href="#" onclick=${like.bind(null, true)}><i class="fa fa-heart-o" aria-hidden="true"></i></a>

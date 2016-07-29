@@ -22,7 +22,7 @@ app.use(express.static('public'))
 
 
 app.get('/', function(req, res) {
-    res.render('index', { title: 'Platzigram' });
+    res.render('index', { title: 'Simpsogram' });
 });
 
 app.get('/signup', function(req, res) {
@@ -49,13 +49,11 @@ app.get('/api/characters', function(req, res) {
 });
 
 app.get('/api/character/:id', function(req, res) {
-    console.log('llegue')
     request
         .get(`http://api.tvmaze.com/characters/${req.params.id}`)
         .end(function(err, result) {
             if (err) return res.status(500).json(err);
             var character = JSON.parse(result.text);
-            console.log(character);
             res.json(character);
         });
 })

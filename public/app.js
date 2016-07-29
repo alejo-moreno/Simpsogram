@@ -18063,9 +18063,7 @@ var _superagent = require('superagent');
 
 var _superagent2 = _interopRequireDefault(_superagent);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function loadCharacters(ctx, next) {
     _superagent2.default.get('/api/characters').end(function (err, res) {
@@ -18169,21 +18167,9 @@ var _apiClient = require('../api-client');
 
 var ApiClient = _interopRequireWildcard(_apiClient);
 
-function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) {
-        return obj;
-    } else {
-        var newObj = {};if (obj != null) {
-            for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-            }
-        }newObj.default = obj;return newObj;
-    }
-}
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/character/:id', _header2.default, function (ctx, next) {
     var main = document.getElementById('main-container');
@@ -18224,13 +18210,9 @@ var _translate = require('../translate');
 
 var _translate2 = _interopRequireDefault(_translate);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function userPageTemplate(character) {
   var el = (0, _yoYo2.default)(_templateObject, character.image.medium, character.name, character.name, character.posts.map(function (post) {
@@ -18246,7 +18228,7 @@ function renderPost(post) {
 },{"../layout":375,"../translate":383,"yo-yo":359}],369:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#" onclick=', '>', '</a></li>\n          <li><a href="#" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-16 center-align">© 2016 Simpsogram</div>\n    </div>\n  </div>\n</footer>'], ['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#" onclick=', '>', '</a></li>\n          <li><a href="#" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-16 center-align">© 2016 Simpsogram</div>\n    </div>\n  </div>\n</footer>']);
+var _templateObject = _taggedTemplateLiteral(['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#" onclick=', '>', '</a></li>\n          <li><a href="#" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-16 center-align">© 2016 Simpsogram - To Sid With Love</div>\n    </div>\n  </div>\n</footer>'], ['<footer class="site-footer">\n  <div class="container">\n    <div class="row">\n      <div class="col s12 l3 center-align"><a href="#" data-activates="dropdown1" class="dropdown-button btn btn-flat">', '</a>\n        <ul id="dropdown1" class="dropdown-content">\n          <li><a href="#" onclick=', '>', '</a></li>\n          <li><a href="#" onclick=', '>', '</a></li>\n        </ul>\n      </div>\n      <div class="col s12 l3 push-16 center-align">© 2016 Simpsogram - To Sid With Love</div>\n    </div>\n  </div>\n</footer>']);
 
 var _yoYo = require('yo-yo');
 
@@ -18256,13 +18238,9 @@ var _translate = require('../translate');
 
 var _translate2 = _interopRequireDefault(_translate);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var el = (0, _yoYo2.default)(_templateObject, _translate2.default.message('language'), lang.bind(null, 'es'), _translate2.default.message('spanish'), lang.bind(null, 'en-US'), _translate2.default.message('english'));
 
@@ -18296,13 +18274,9 @@ var _emptyElement = require('empty-element');
 
 var _emptyElement2 = _interopRequireDefault(_emptyElement);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var el = (0, _yoYo2.default)(_templateObject, _translate2.default.message('logout'));
 
@@ -18339,21 +18313,9 @@ var _apiClient = require('../api-client');
 
 var ApiClient = _interopRequireWildcard(_apiClient);
 
-function _interopRequireWildcard(obj) {
-    if (obj && obj.__esModule) {
-        return obj;
-    } else {
-        var newObj = {};if (obj != null) {
-            for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-            }
-        }newObj.default = obj;return newObj;
-    }
-}
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/', _header2.default, ApiClient.loadCharactersAxios, function (ctx, next) {
     (0, _title2.default)('Simpsogram');
@@ -18365,7 +18327,7 @@ function _interopRequireDefault(obj) {
 },{"../api-client":366,"../header":370,"./template":372,"empty-element":318,"page":349,"title":358}],372:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['\n<div class="container timeline">\n<div class="row">\n  <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n    <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n       <div id="fileName" class="fileUpload btn btn-flat cyan">\n       <span><i class="fa fa-camera" aria-hidden="true"></i> ', '</span>\n       <input name="picture" id="file" type="file" class="upload" onchange=', ' />\n       </div>\n       <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n       ', '\n       </button>\n       <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\n    </form>\n  </div>\n</div>\n    <div class="row">      \n        ', '      \n    </div>\n</div>'], ['\n<div class="container timeline">\n<div class="row">\n  <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n    <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n       <div id="fileName" class="fileUpload btn btn-flat cyan">\n       <span><i class="fa fa-camera" aria-hidden="true"></i> ', '</span>\n       <input name="picture" id="file" type="file" class="upload" onchange=', ' />\n       </div>\n       <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n       ', '\n       </button>\n       <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\n    </form>\n  </div>\n</div>\n    <div class="row">      \n        ', '      \n    </div>\n</div>']);
+var _templateObject = _taggedTemplateLiteral(['\n<div class="container timeline">\n<div class="row">\n  <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n    <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n       <div id="fileName" class="fileUpload hide btn btn-flat cyan">\n       <span><i class="fa fa-camera" aria-hidden="true"></i> ', '</span>\n       <input name="picture" id="file" type="file" class="upload" onchange=', ' />\n       </div>\n       <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n       ', '\n       </button>\n       <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\n    </form>\n  </div>\n</div>\n    <div class="row">      \n        ', '      \n    </div>\n</div>'], ['\n<div class="container timeline">\n<div class="row">\n  <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">\n    <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n       <div id="fileName" class="fileUpload hide btn btn-flat cyan">\n       <span><i class="fa fa-camera" aria-hidden="true"></i> ', '</span>\n       <input name="picture" id="file" type="file" class="upload" onchange=', ' />\n       </div>\n       <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">\n       ', '\n       </button>\n       <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n\n    </form>\n  </div>\n</div>\n    <div class="row">      \n        ', '      \n    </div>\n</div>']);
 
 var _yoYo = require('yo-yo');
 
@@ -18387,13 +18349,9 @@ var _superagent = require('superagent');
 
 var _superagent2 = _interopRequireDefault(_superagent);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-    return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 module.exports = function template(characters) {
     var el = (0, _yoYo2.default)(_templateObject, onsubmit, _translate2.default.message('upload-picture'), onchange, _translate2.default.message('upload'), oncancel, characters.map(function (character) {
@@ -18432,9 +18390,7 @@ var _page = require('page');
 
 var _page2 = _interopRequireDefault(_page);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 require('babel-polyfill'); //Only use if async-await is used
 
@@ -18461,13 +18417,9 @@ var _yoYo = require('yo-yo');
 
 var _yoYo2 = _interopRequireDefault(_yoYo);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-    return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function landing(box) {
     return (0, _yoYo2.default)(_templateObject, box);
@@ -18486,13 +18438,9 @@ var _yoYo = require('yo-yo');
 
 var _yoYo2 = _interopRequireDefault(_yoYo);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function layout(content) {
   return (0, _yoYo2.default)(_templateObject, content);
@@ -18506,7 +18454,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['<div class="card col s12 m6 l4 ', '">\n        <div class="card-image">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/character/', '" class="card-title">\n                <img src="', '" class="avatar" />                \n            </a>\n            <span class="username">', '</span>            \n            <small class="right time">', ' </small>\n            <p>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart-o" aria-hidden="true"></i></a>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart" aria-hidden="true"></i></a>\n               <span class="left likes">', '  </span>\n            </p>\n        </div>\n    </div>'], ['<div class="card col s12 m6 l4 ', '">\n        <div class="card-image">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/character/', '" class="card-title">\n                <img src="', '" class="avatar" />                \n            </a>\n            <span class="username">', '</span>            \n            <small class="right time">', ' </small>\n            <p>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart-o" aria-hidden="true"></i></a>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart" aria-hidden="true"></i></a>\n               <span class="left likes">', '  </span>\n            </p>\n        </div>\n    </div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="card col s12 m6 l4 ', '">\n        <div class="card-image">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/character/', '" class="card-title">\n                <img src="', '" class="avatar" />\n                <span class="username">', '</span>                \n            </a>\n                        \n            <small class="right time">', ' </small>\n            <p>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart-o" aria-hidden="true"></i></a>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart" aria-hidden="true"></i></a>\n               <span class="left likes">', '  </span>\n            </p>\n        </div>\n    </div>'], ['<div class="card col s12 m6 l4 ', '">\n        <div class="card-image">\n            <img class="activator" src="', '">\n        </div>\n        <div class="card-content">\n            <a href="/character/', '" class="card-title">\n                <img src="', '" class="avatar" />\n                <span class="username">', '</span>                \n            </a>\n                        \n            <small class="right time">', ' </small>\n            <p>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart-o" aria-hidden="true"></i></a>\n               <a class="left" href="#" onclick=', '><i class="fa fa-heart" aria-hidden="true"></i></a>\n               <span class="left likes">', '  </span>\n            </p>\n        </div>\n    </div>']);
 
 exports.default = pictureCard;
 
@@ -18518,13 +18466,9 @@ var _translate = require('../translate');
 
 var _translate2 = _interopRequireDefault(_translate);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-    return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function pictureCard(subject) {
 
@@ -18565,9 +18509,7 @@ var _title = require('title');
 
 var _title2 = _interopRequireDefault(_title);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/signin', function (ctx, next) {
     (0, _title2.default)('Simpsogram - Signin');
@@ -18596,13 +18538,9 @@ var _translate = require('../translate');
 
 var _translate2 = _interopRequireDefault(_translate);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var signinForm = (0, _yoYo2.default)(_templateObject, _translate2.default.message('signin.facebook'), _translate2.default.message('signin.text'), _translate2.default.message('username'), _translate2.default.message('password'), _translate2.default.message('signin'), _translate2.default.message('signin.not-have-account'), _translate2.default.message('signup.call-to-action'));
 
@@ -18631,9 +18569,7 @@ var _header = require('../header');
 
 var _header2 = _interopRequireDefault(_header);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _page2.default)('/signup', function (ctx, next) {
     (0, _title2.default)('Simpsogram - Signup');
@@ -18662,13 +18598,9 @@ var _translate = require('../translate');
 
 var _translate2 = _interopRequireDefault(_translate);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var signupForm = (0, _yoYo2.default)(_templateObject, _translate2.default.message('signup.subheading'), _translate2.default.message('signin.facebook'), _translate2.default.message('signin.text'), _translate2.default.message('email'), _translate2.default.message('fullname'), _translate2.default.message('username'), _translate2.default.message('password'), _translate2.default.message('signup.call-to-action'), _translate2.default.message('signin.have-account'), _translate2.default.message('signin'));
 
