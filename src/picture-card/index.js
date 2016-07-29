@@ -7,7 +7,7 @@ export default function pictureCard(subject) {
     var el;
 
     function render(subject) {
-        return yo`<div class="card col s12 m6 l4 ${subject.liked ? 'liked' : ''}">
+        return yo`<div class="card ${subject.liked ? 'liked' : ''}">
         <div class="card-image">
             <img class="activator" src="${subject.character.image.medium}">
         </div>

@@ -16,15 +16,17 @@ module.exports = function template(characters) {
        <input name="picture" id="file" type="file" class="upload" onchange=${onchange} />
        </div>
        <button id="btnUpload" type="submit" class="btn btn-flat cyan hide">
-       ${translate.message('upload')}
+            ${translate.message('upload')}
        </button>
        <button id="btnCancel" type="button" class="btn btn-flat red hide" onclick=${oncancel}><i class="fa fa-times" aria-hidden="true"></i></button>
 
     </form>
   </div>
 </div>
-    <div class="row">      
-        ${characters.map(character => picture(character))}      
+    <div class="row"> 
+      <div class="col s12 m10 offset-m1 l6 offset-l3">     
+        ${characters.map(character => picture(character))}
+      </div>         
     </div>
 </div>`;
 
