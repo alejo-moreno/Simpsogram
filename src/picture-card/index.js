@@ -8,15 +8,15 @@ export default function pictureCard(subject) {
 
     function render(subject) {
         return yo`<div class="card ${subject.liked ? 'liked' : ''}">
-        <div class="card-image">
-            <img class="activator" src="${subject.character.image.medium}">
+        <div class="card-image" ondblclick=${like.bind(null, null, true)}>
+            <img class="activator" src="${subject.character.image.medium}" />
+            <i class="fa fa-heart like-heart ${subject.likedHeart ? 'liked' : ''}"></i>
         </div>
         <div class="card-content">
             <a href="/character/${subject.character.id}" class="card-title">
-                <img src="${subject.person.image.medium}" class="avatar" />
+                <img src="${subject.person.image.medium}" class="avatar"  />
                 <span class="username">${subject.character.name}</span>                
-            </a>
-                        
+            </a>                        
             <small class="right time">${translate.date.format(subject.createdAt)} </small>
             <p>
                <a class="left" href="#" onclick=${like.bind(null, true)}><i class="fa fa-heart-o" aria-hidden="true"></i></a>
@@ -27,11 +27,28 @@ export default function pictureCard(subject) {
     </div>`;
     }
 
-    function like(liked) {
-        subject.liked = liked;
+    function like(liked, isDblClick) {
+        if (isDblClick) {
+            subject.likedHeart = subject.liked = !subject.liked;
+            liked = subject.liked;
+        } else {
+            pic.liked = liked;
+        }
         subject.likes += liked ? 1 : -1;
-        var newEl = render(subject);
-        yo.update(el, newEl)
+
+        function doRender() {
+            var newEl = render(subject);
+            yo.update(el, newEl);
+        }
+        doRender();
+
+
+        setTimeout(function () {
+            subject.likedHeart = false;
+            doRender();
+        }, 1500)
+
+
         return false;
     }
 
